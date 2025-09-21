@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bear Wellness Studio</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Font Awesome para iconos - Si quieres otros iconos, cambia esta URL -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Manifest para PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Estilos CSS externos -->
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <!-- === ESTRUCTURA HTML === -->
+  <body>
+    <!-- Contenedor principal de la tarjeta -->
+    <div class="card">
+
+      <!-- Sección de imágenes: banner y perfil superpuesta -->
+      <div class="image-container">
+        <!-- Carrusel de banners -->
+        <img id="banner-carousel" src="images/Banner.png" alt="Banner"
+          class="banner">
+        <!-- Imagen de perfil - CAMBIAR src="images/Profile.jpg" por tu foto -->
+        <img src="images/Profile.png" alt="Foto de perfil" class="profile-img">
+      </div>
+
+      <!-- Información personal -->
+      <h1>Josue A. Borges Vázquez</h1> <!-- CAMBIAR por tu nombre -->
+      <p class="titulo">San Lorenzo, PR</p> <!-- CAMBIAR por tu ubicación -->
+      <p>Nos especializamos en acondicionamiento físico y fortalecimiento
+        mental, con programas que integran cuerpo, mente y espíritu.</p>
+      <!-- CAMBIAR por tu descripción -->
+        <div>
+          <div class="social-row">
+          <a class="social-btn"
+            href="https://www.instagram.com/bigbearsl/#"
+            aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        </div>
+
+      <!-- Grilla de botones de contacto/redes sociales -->
+      <div class="button-grid">
+        <!-- Botón de servicios - ejecuta función JavaScript -->
+        <button class="button" onclick="mostrarServicios()">
+          <i class="fas fa-dumbbell"></i> Servicios
+        </button>
+
+        <!-- Botón de Email - CAMBIAR correo@ejemplo.com por tu email -->
+        <a class="button" href="mailto:bigbearwellness@gmail.com">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <!-- Botón de teléfono con selección de número -->
+        <button class="button" onclick="mostrarMenuLlamada()">
+          <i class="fas fa-phone"></i> Llamar
+        </button>
+        <div id="menu-llamada" style="display:none; margin-top:8px;">
+          <button class="button" style="width:100%;margin-bottom:4px;"
+            onclick="llamarNumero('+17874132327')">Llamar 787-413-2327</button>
+          <button class="button" style="width:100%;margin-bottom:4px;"
+            onclick="llamarNumero('+19392655306')">Llamar 939-265-5306</button>
+          <button class="button" style="width:100%;background:#ccc;color:#222;"
+            onclick="cerrarMenuLlamada()">Cancelar</button>
+        </div>
+
+        <!-- Botón de WhatsApp con selección de número -->
+        <button class="button" onclick="mostrarMenuWhatsapp()">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </button>
+        <div id="menu-whatsapp" style="display:none; margin-top:8px;">
+          <button class="button" style="width:100%;margin-bottom:4px;"
+            onclick="enviarWhatsapp('7874132327')">WhatsApp
+            787-413-2327</button>
+          <button class="button" style="width:100%;margin-bottom:4px;"
+            onclick="enviarWhatsapp('9392655306')">WhatsApp
+            939-265-5306</button>
+          <button class="button" style="width:100%;background:#ccc;color:#222;"
+            onclick="cerrarMenuWhatsapp()">Cancelar</button>
+        </div>
+      </div>
+
+      <!-- Botón para compartir (Share) y agregar contacto -->
+      <div style="display: flex; gap: 10px; justify-content: center;">
+        <button class="button-wide" onclick="compartirEnlace()">
+          <i class="fas fa-share-alt"></i> Share
+        </button>
+        <button class="button-wide" onclick="agregarContacto()">
+          <i class="fas fa-user-plus"></i> Agregar contacto
+        </button>
+      </div>
+
+      <!-- Créditos - CAMBIAR o eliminar si no quieres mostrar -->
+      <p class="powered-by">
+        <span style="cursor:pointer;"
+          onclick="window.location.href='https://hatechnologiespr.github.io/'">Powered
+          by HA Technologies</span>
+      </p>
+
+    </div>
+
+    <!-- === JAVASCRIPT EXTERNO === -->
+    <script src="index.js"></script>
+  </body>
+</html>
+
